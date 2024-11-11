@@ -1,3 +1,9 @@
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+
 /* PÁGINA PRINCIPAL */
 /* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 #p-TextoPrincipal {
@@ -5,28 +11,39 @@
     font-size: 1.2rem;
     line-height: 1.6;
     text-align: center;
-    width: 70%; 
+    width: 70%;
     margin: 0 auto;
     padding: 20px;
     color: #333;
 }
+
 #h2-Texto {
     font-family: 'Georgia', serif;
     font-size: 36px;
-    text-align: center; 
+    text-align: center;
     margin: 50px 0;
     color: #333;
 }
 
 .menuPrincipal {
-    background-color:  #dbebe8;
-    color:  #5d8c7a ;
-    font-family: Verdana, Geneva, Tahoma, sans-serif ;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #dbebe8;
+    color: #2d5d45;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 22px;
-    padding:14px 0px 0px;
-    border-radius: 5px;
-    text-align: center; 
+    padding: 10px 0;
+    border-radius: 0 0 5px 5px;
+    text-align: center;
+    z-index: 1000;
 }
+
+
+main {
+    margin-top: 250px;
+}
+
 
 nav {
     background-color: #5d8c7a;
@@ -54,18 +71,20 @@ nav ul li a {
 
 
 nav ul li a:hover {
-    background-color:#88931d;
+    background-color: #88931d;
     border-radius: 5px;
+    transition: background-color 0.9s ease;
 }
 
+
 .textoPrincipal {
-    font-family: Verdana, Geneva, Tahoma, sans-serif ;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 13px;
-    
+
 }
 
 .tiposSuculentas {
-    font-family: Verdana, Geneva, Tahoma, sans-serif ;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 13px;
 }
 
@@ -74,12 +93,13 @@ nav ul li a:hover {
     justify-content: center;
     align-items: center;
     padding: 30px;
-    width: 100%; 
+    width: 100%;
 }
 
 .imagemCentralizada img {
-    width: 800px;
-    height: 400px; 
+    width: 100%;
+    max-width: 800px;
+    height: auto;
     border-radius: 15px;
 }
 
@@ -100,14 +120,65 @@ nav ul li a:hover {
     text-align: center;
     border-radius: 10px;
 }
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* RODAPÉ DO SITE */
 /* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 
+.rodape {
+    font-family: 'Georgia', serif;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.8em;
+    margin-top: 10%;
+}
+
+.rodape-conteudo {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.rodape-info,
+.rodape-redes,
+.rodape-direitos {
+    margin: 5px 0;
+}
+
+.rodape-direitos {
+    margin-top: 43px;
+}
+
+.rodape h4 {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.rodape p {
+    margin: 5px 0;
+}
+
+.rodape-redes a {
+    margin: 0 10px;
+}
+
+.rodape-redes img {
+    vertical-align: middle;
+}
+
+
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 /* FORMULÁRIO CSS */
 /* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 .formulario {
-    margin-top: 40px;
+    margin-top: 15%;
     background-color: #fff;
     padding: 30px;
     border-radius: 10px;
@@ -169,14 +240,32 @@ button[type="submit"]:hover {
 }
 
 /* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* FORMULÁRIO ENVIADO */
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+#formularioEnviado {
+    text-align: center;
+    padding: 40px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+
+#dadosRecebidos {
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+#dadosRecebidos p {
+    margin: 10px 0;
+    font-weight: bold;
+}
 
 
-
-
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 /* Sobre Nós */
 /* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
-.container {
+.container-about {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -200,10 +289,10 @@ button[type="submit"]:hover {
 }
 
 
-.about-content, 
-.about-content h2, 
-.about-content p, 
-.about-content h3, 
+.about-content,
+.about-content h2,
+.about-content p,
+.about-content h3,
 .about-content ul li {
     font-family: 'Georgia', serif;
     font-size: 1.2rem;
@@ -255,4 +344,3 @@ button[type="submit"]:hover {
     position: absolute;
     left: 0;
 }
-
